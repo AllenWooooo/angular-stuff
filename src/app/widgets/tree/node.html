@@ -1,0 +1,6 @@
+<li ng-class="{'open': isOpen}">
+	<span class="trigger-icon" ng-click="toggle()" ng-if="!!node.children"></span>
+	<span class="folder-icon" ng-class="{'leaf': !!!node.children}"></span>
+	<label class="name" ng-click="select()" ng-class="{'selected': isSelected}">{{node.name}}</label>
+	<tree-node nodes="node.children" ng-if="!!node.children"></tree-node>
+</li>

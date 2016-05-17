@@ -42,10 +42,6 @@ function HomeController() {
       },{
         name: 'tree-2-1-3'
       }]
-    },{
-      name: 'tree-2-2'
-    },{
-      name: 'tree-2-3'
     }]
   },{
     name: 'tree-3',

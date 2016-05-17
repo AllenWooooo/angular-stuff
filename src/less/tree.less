@@ -32,10 +32,17 @@
     }
 
     &:first-child:before {
+      top: 0;
+    }
+  }
+
+  node {
+
+    &:first-child > li:before {
       top: 12px;
     }
 
-    &:last-child:before {
+    &:last-child > li:before {
       height: 12px;
     }
   }
@@ -82,7 +89,8 @@
   }
 
   .open {
-    > tree > .tree {
+
+    > tree-node > .tree {
       display: block;
     }
 
@@ -99,10 +107,11 @@
     display: none;
     margin-left: 2px;
 
-    li {
-      &:first-child:before {
+    node {
+
+      &:first-child > li:before {
         top: 0;
       }
-    }
+  }
   }
 }

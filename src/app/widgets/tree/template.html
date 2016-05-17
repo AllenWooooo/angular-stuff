@@ -1,8 +1,0 @@
-<ul ng-sortable="{group: 'tree'}" class="tree">
-  <li ng-repeat="node in treeNode" ng-class="{'open': node.isOpen}">
-    <span class="trigger-icon" ng-click="toggle(node)" ng-if="!!node.children"></span>
-    <span class="folder-icon" ng-class="{'leaf': !!!node.children}"></span>
-    <label class="name" ng-click="select(node)" ng-class="{'selected': node.isSelected}">{{node.name}}</label>
-    <tree tree-node="node.children" ng-if="!!node.children"></tree>
-  </li>
-</ul>
