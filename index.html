@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Angular stuff</title>
-  <link rel="stylesheet" href="./static/assets/style/app.css">
+  <link rel="stylesheet" href="static/assets/style/app.css">
 </head>
 <body>
   <div ui-view></div>
-  <script src="./static/assets/vendors.js"></script>
-  <script src="./static/assets/app.js"></script>
+
+  <div alert-modal-container class="alert-container" ng-class="{show: $visible}">
+    <alert-modal ng-repeat="alert in $alerts" type="{{alert.type}}" message="{{alert.message}}" close="alert.close()" class="alert-modal"></alert-modal>
+  </div>
+
+  <script src="static/assets/vendors.js"></script>
+  <script src="static/assets/app.js"></script>
 </body>
 </html>

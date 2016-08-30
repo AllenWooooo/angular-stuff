@@ -86,6 +86,7 @@ if (MODE === 'production') {
   config.plugins.push(...plugins);
 } else {
   config.devtool = 'eval';
+  config.entry.app.unshift('webpack/hot/only-dev-server');
 }
 
 export default config;
